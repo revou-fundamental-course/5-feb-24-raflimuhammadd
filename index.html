@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Temperature Calculator</title>
+</head>
+
+<body>
+    <main class="calculator-container">
+        <form id="tempForm">
+            <fieldset>
+                <legend>Temperature Converter</legend>
+                <div class="input-group">
+                    <label for="temperature">Enter Temperatre:</label>
+                    <input type="number" id="temperature" name="temperature" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="scale">Select Temp:</label>
+                    <select id="scale" name="scale">
+                        <option value="celsius">Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="reamur">Reamur</option>
+                    </select>
+                </div>
+
+                
+                <div class="button-container">
+                    <button type="button" id="convertButton" onclick="convertTemperature()">Convert</button>
+                    <button type="button" id="resetButton" onclick="resetForm()">Reset</button>
+                    <button type="button" id="reverseButton" onclick="reverseConversion()">Reverse</button>
+                </div>
+                
+                <button id="drkButton" onclick="toggleDark()">Dark Present</button>
+            
+            </fieldset>
+        </form>
+
+
+        <section id="resultContainer" class="hidden">
+            <h2>Conversion Result:</h2>
+            <p id="resultExplanation"></p>
+        </section>
+
+        <section id="formulaContainer" class="hidden">
+            <h2>Conversion Formula:</h2>
+            <p id="formulaExplanation"></p>
+        </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <p>© 2024 Raflimuhh All rights reserved.</p>
+    </div>
+</footer>
+
+
+</html>
